@@ -6,5 +6,8 @@ Win condition
     -player completes all levels ? win : lose 
     -Each levels parttern is extend longer than the one prior
     until win/reset
+    -Sound
     -(Wish list) A timer which button selections must be entered within per level
-    -(Wish list) Pattern speed
+    -(Wish list) Pattern speed increase each level
+
+
