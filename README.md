@@ -10,4 +10,18 @@ Win condition
     -(Wish list) A timer which button selections must be entered within per level
     -(Wish list) Pattern speed increase each level
 
+Board
+    -A circle divided in four, each a different color
+    -Logically, each division will represent a number
+    -Colors need to light up when CPU shows pattern & Player input
+    -Sound on light up (CPU) and on click (Player)
+    -Level Display
+    -(Wish list) Visual Timer
 
+CPU
+    -Each section of the board represents a number
+    -Logic will produce a random number of 1 through 4,
+        this will loop for the specified number of times
+        depending on the level.
+    -The random numbers will trigger events that cue the visuals
+        and sound
