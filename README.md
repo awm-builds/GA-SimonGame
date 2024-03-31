@@ -24,4 +24,8 @@ CPU
         this will loop for the specified number of times
         depending on the level.
     -The random numbers will trigger events that cue the visuals
-        and sound
+        and sound at a timed interval, creating a pattern for the
+         player to follow
+    -The loop continues until the player wins all levels, loses in any level,
+    or quits the game.
+
