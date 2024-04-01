@@ -29,3 +29,6 @@ CPU
     -The loop continues until the player wins all levels, loses in any level,
     or quits the game.
 
+Player
+    -
+
