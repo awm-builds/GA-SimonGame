@@ -42,7 +42,8 @@ Player
     -(Wishlist) A win counter until a loss or quit has been enter.
     
 
-Game Logic Needs
+
+Game Logic Needs (function planning)
 
     -A Random number generator function
         -Needs to create random numbers between 1-4, including 1 & 4.
