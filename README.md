@@ -30,5 +30,8 @@ CPU
     or quits the game.
 
 Player
+    -Clicks start button to initiate the game
+    -Watches CPU pattern
+    -Must replicate pattern by clicking one of 4 buttons
     -
 
