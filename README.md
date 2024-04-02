@@ -32,6 +32,28 @@ CPU
 Player
     -Clicks start button to initiate the game
     -Watches CPU pattern
+    -Display changes to indicate players turn
     -Must replicate pattern by clicking one of 4 buttons
-    -
+    -When the correct sequence of buttons are entered by user,
+        update to next level.
+    -There will be a quit button availible once the game is in play.
+    -Play again and quit buttons will be displayed if player wins or loses. 
+    -Win/lose messages will dispay when each condition is met
+    -(Wishlist) A win counter until a loss or quit has been enter.
+    
+
+Game Logic Needs
+
+
+    -A Random number generator function
+        -Needs to create random numbers between 1-4, including 1 & 4.
+        -These numbers must be saved in an array.
+        -This array must be stored for the duration of a turn.
+
+    -A player 
+
+    -Array comparison function
+        -A function to compare CPU array with Player array.
+        -return true if match, false if not a match.
+
 
