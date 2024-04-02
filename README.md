@@ -51,13 +51,24 @@ Game Logic Needs
         -returns array
 
     -A player input function
-        -References click events for button submission
+        -References click events for button submissions
+        -triggers activeButton func. onClick
         -Stores each player input (1-4) into an array.
         -returns array
 
     -Array comparison function
         -A function to compare CPU array with Player array.
-        -return boolean ? if match : if not a match.
+        -boolean ? if match : if not a match.
+        -if (boolean)
+            true
+                // might not work with boolean parent
+                if (win level)
+                    -win level func.
+                if (win game)
+                    -win game func.
+            false
+                -trigger lose func.
+            
     
     -A Win Level Function
         -Takes in boolean from comparison func.
@@ -66,7 +77,7 @@ Game Logic Needs
         -If false, trigger lose display
         -returns boolean
 
-    Lose display func.
+    Lose func.
         -When trigger, changes display:
             -You lose message
             -Triggers Play again func.
