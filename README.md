@@ -37,12 +37,12 @@ Player
     -When the correct sequence of buttons are entered by user,
         update to next level.
     -There will be a quit button availible once the game is in play.
-    -Play again and quit buttons will be displayed if player wins or loses. 
+    -Play again and quit buttons will be displayed if player wins game or loses. 
     -Win/lose messages will dispay when each condition is met
     -(Wishlist) A win counter until a loss or quit has been enter.
     
 
-Game Logic Needs
+Game Logic Needs - Functions pseudocode
 
     -A Random number generator function
         -Needs to create random numbers between 1-4, including 1 & 4.
