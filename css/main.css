@@ -1,0 +1,30 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background: #8198a6;
+	color: #fff;
+}
+
+
+.Btn {
+    padding: 0.8rem;
+    width: 100px;
+    border-radius: 10px;
+    background: #9fb3bf;
+    outline: none;
+    border-color: #ffffff;
+    border: 3px solid;
+    cursor: pointer;
+}
+
+.Hide-Btn 
+{
+    padding: 0.8rem;
+    width: 100px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    opacity: .5;
+}
