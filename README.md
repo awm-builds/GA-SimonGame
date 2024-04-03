@@ -70,7 +70,7 @@ Game Logic Needs - Functions pseudocode
                 -trigger lose func.
             
     
-    -A Win Level Function
+    -Win Level func.
         -Takes in boolean from comparison func.
         -If true, continues to next level
             -Updates level counter
@@ -82,7 +82,7 @@ Game Logic Needs - Functions pseudocode
             -You lose message
             -Triggers Play again func.
 
-    Win game display func.
+    Win game func.
         -When triggered, changes display:
             -You win message
             -Triggers Play again func.
@@ -102,7 +102,7 @@ Game Logic Needs - Functions pseudocode
         -displays CPU pattern
         -triggers intrvlDisplay
 
-    intrvlDisplay func.
+    intrvlDspl func. (interval display)
         -triggers lightUp func. at timed intervals
         -(wishlist) change intervals depending on level
 
