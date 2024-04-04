@@ -28,3 +28,43 @@
     cursor: pointer;
     opacity: .5;
 }
+
+#redBtn {
+  background-color: red;
+}
+#grnBtn {
+  background-color: green;
+}
+#bluBtn {
+  background-color: blue;
+}
+#orgBtn {
+  background-color: orange;
+}
+
+#statsUI {
+    /* display: none; */
+}
+
+#controls {
+    /* display: none; */
+}
+
+#text {
+    /* display: none; */
+}
+
+#timerNum {
+    /* display: none; */
+}
+
+#turnName {
+    /* display: none; */
+}
+
+#winNum {
+    /* display: none; */
+}
+
+
+

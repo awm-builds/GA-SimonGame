@@ -112,3 +112,37 @@ Game Logic Needs - Functions pseudocode
         *-triggers sound (may need a func.)
 
 
+******************************************************
+
+
+  /*----- constants -----
+  
+
+
+  document.querySelector('button').addEventListener('click', playStart);
+  document.querySelector('button').addEventListener('click', playAgain);
+  document.querySelector('button').addEventListener('click', quitGame);
+  
+  
+  
+  */
+
+
+  /*----- state variables -----*/
+
+
+  /*----- cached elements  -----*/
+
+
+  /*----- event listeners -----*/
+
+
+/*----- functions -----*/
+
+
+
+
+
+HTML - Work in progress
+
+
