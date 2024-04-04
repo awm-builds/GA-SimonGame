@@ -84,6 +84,25 @@ playAgainBtn.onclick = function () {
   playAgainBtn.style.display = 'none';
 }
 
+function startGame() { 
+
+}
+
+function setPattern() { 
+  const boardSlct = [/*redBtn, grnBtn, bluBtn, ylwBtn*/];
+  const numGen = boardSlct[Math.floor(Math.random() * boardSlct.length)];
+
+  return numGen;
+}
+
+function cpuTurn() { 
+  const livePattern = [...cpuNums];
+  livePattern.push(setPattern());
+}
+
+
+
+
 
 
 
