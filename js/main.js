@@ -27,6 +27,21 @@ const winLossTexts = [
   }
 ];
 
+const playQuitBtns = [
+  {
+    name: "Play button",
+    "button text": "Play",
+  },
+  {
+    name: "Play Again button",
+    "button text": "Play Again",
+  },
+  {
+    name: "Quit Button",
+    "button text": "Quit",
+  }
+];
+
   /*----- state variables -----*/
 
 
