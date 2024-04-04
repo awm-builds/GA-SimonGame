@@ -117,11 +117,19 @@ Game Logic Needs - Functions pseudocode
 
   /*----- constants -----
   
+// text messages
 
 
-  document.querySelector('button').addEventListener('click', playStart);
-  document.querySelector('button').addEventListener('click', playAgain);
-  document.querySelector('button').addEventListener('click', quitGame);
+// color selections
+document.querySelector('#startGame').addEventListener('click', playStart);
+document.querySelector('#startGame').addEventListener('click', playStart);
+document.querySelector('#startGame').addEventListener('click', playStart);
+document.querySelector('#startGame').addEventListener('click', playStart);
+
+// controls
+document.querySelector('#startGame').addEventListener('click', playStart);
+document.querySelector('#playAgain').addEventListener('click', playAgain);
+document.querySelector('#quitGame').addEventListener('click', quitGame);
   
   
   
