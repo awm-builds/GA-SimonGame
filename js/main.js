@@ -1,6 +1,6 @@
   /*----- constants -----*/
 
-
+const playNew = new Audio;
 
 
 // Objects
@@ -56,14 +56,14 @@ const quitGameBtn = document.querySelector('#quitGame');
 
   /*----- event listeners -----*/
 redBtn.addEventListener('click', playBtn);
+grnBtn.addEventListener('click', playBtn);
+bluBtn.addEventListener('click', playBtn);
+ylwBtn.addEventListener('click', playBtn);
 
 // event test
-const playNew = new Audio;
 
-function playBtn(name) {
-  playNew.src = 'audio/pickBtnSnd.wav';
-  playNew.play();
-}
+
+
 
 /*----- functions -----*/
 init();
@@ -100,6 +100,11 @@ quitGameBtn.onclick = function () {
 playAgainBtn.onclick = function () {
   // playAgain();
   playAgainBtn.style.display = 'none';
+}
+
+function playBtn(name) {
+  playNew.src = 'audio/pickBtnSnd.wav';
+  playNew.play();
 }
 
 function startGame() { 
