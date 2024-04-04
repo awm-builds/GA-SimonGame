@@ -1,4 +1,8 @@
   /*----- constants -----*/
+
+
+
+
 // Objects
 const winLossTexts = [
   {
@@ -51,15 +55,28 @@ const quitGameBtn = document.querySelector('#quitGame');
 
 
   /*----- event listeners -----*/
+redBtn.addEventListener('click', playBtn);
 
+// event test
+const playNew = new Audio;
 
+function playBtn(name) {
+  playNew.src = 'audio/pickBtnSnd.wav';
+  playNew.play();
+}
 
 /*----- functions -----*/
 init();
 
 function init() {
   playAgainBtn.style.display = 'none';
+  // render();
 }
+
+/*
+render(){
+}
+*/
 
 function winLossFunc(winLoss) {
   if (winLoss === 'w') {
@@ -89,6 +106,7 @@ function startGame() {
 
 }
 
+// Picks 1 of 4 numbers   // Test passed
 function setPattern() { 
   const boardSlcts = [ 5, 6, 7, 8]; /*redBtn, grnBtn, bluBtn, ylwBtn*/
   const numGen = boardSlcts[Math.floor(Math.random() * boardSlcts.length)];
@@ -96,14 +114,14 @@ function setPattern() {
   return numGen;
 }
 
-console.log(setPattern());
+// console.log(setPattern());
 
 function cpuTurn() { 
   const livePattern = [...cpuNums];
   livePattern.push(setPattern());
 }
 
-
+// console.log(cpuTurn());
 
 
 
