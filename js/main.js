@@ -70,6 +70,7 @@ function winLossFunc(winLoss) {
 }
 
 playStartBtn.onclick = function () {
+  // startGame();
   playStartBtn.style.display = 'none';
 };
 
@@ -89,11 +90,13 @@ function startGame() {
 }
 
 function setPattern() { 
-  const boardSlcts = [/*redBtn, grnBtn, bluBtn, ylwBtn*/];
+  const boardSlcts = [ 5, 6, 7, 8]; /*redBtn, grnBtn, bluBtn, ylwBtn*/
   const numGen = boardSlcts[Math.floor(Math.random() * boardSlcts.length)];
 
   return numGen;
 }
+
+console.log(setPattern());
 
 function cpuTurn() { 
   const livePattern = [...cpuNums];
