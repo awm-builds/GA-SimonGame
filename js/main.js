@@ -29,7 +29,7 @@ const playQuitBtns = [
   /*----- state variables -----*/
 let board;  // Array ref 4 color selections
 let turn;  // Cur player turn --> 0/1
-let winSwtc;
+let winLoseSwtc;
 let cpuNums = [];
 let playerNums = [];
 
@@ -89,8 +89,8 @@ function startGame() {
 }
 
 function setPattern() { 
-  const boardSlct = [/*redBtn, grnBtn, bluBtn, ylwBtn*/];
-  const numGen = boardSlct[Math.floor(Math.random() * boardSlct.length)];
+  const boardSlcts = [/*redBtn, grnBtn, bluBtn, ylwBtn*/];
+  const numGen = boardSlcts[Math.floor(Math.random() * boardSlcts.length)];
 
   return numGen;
 }
@@ -99,6 +99,9 @@ function cpuTurn() {
   const livePattern = [...cpuNums];
   livePattern.push(setPattern());
 }
+
+
+
 
 
 

@@ -148,6 +148,26 @@ document.querySelector('#quitGame').addEventListener('click', quitGame);
 /*----- functions -----*/
 
 
+// CPU Patter Func - Disected and build what's needed
+function activateBrd(clrBtn) {
+  const boardSlct = document.querySelector(/*clrBtn*/);
+  const soundSlct = document.querySelector(/*soundID*/);
+
+  boardSlct.classList.add('activated');
+  soundSlct.play();
+
+  setTimeout(() => {
+    boardSlct.classList.remove('activated');
+  }, 300);
+}
+
+function playLevel(livePattern) {
+  livePattern.forEach((color, index) => {
+    setTimeout(() => {
+      activateTile(color);
+    }, (index + 1) * 600);
+  });
+}
 
 
 
