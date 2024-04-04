@@ -36,6 +36,7 @@ let turn;  // Cur player turn --> 0/1
 let winLoseSwtc;
 let cpuNums = [];
 let playerNums = [];
+let level = 0;
 
   /*----- cached elements  -----*/
 // text messages
@@ -64,6 +65,10 @@ ylwBtn.addEventListener('click', playBtn);
 
 
 
+function playBtn() {
+  playNew.src = 'audio/pickBtnSnd.wav';
+  playNew.play();
+}
 
 /*----- functions -----*/
 init();
@@ -119,15 +124,29 @@ function setPattern() {
   return numGen;
 }
 
-// console.log(setPattern());
-
+// cpuTurn test passed
 function cpuTurn() { 
+  level += 1;
   const livePattern = [...cpuNums];
   livePattern.push(setPattern());
+  // return livePattern;
 }
 
 // console.log(cpuTurn());
 
+/*
+function playRound(livePattern) { 
+  livePattern.forEach(
+    (btn, idx) => { 
+      setTimeout(
+        () => {
+          // trigger click btn func   
+          // function(Btn)
+        }, * 400);
+    }
+  )
+}
+*/
 
 
 
