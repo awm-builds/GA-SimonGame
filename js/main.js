@@ -42,12 +42,12 @@ const winLossText = document.querySelector("#winLossText");
 const redBtn = document.querySelector('#redBtn');
 const grnBtn = document.querySelector('#grnBtn');
 const bluBtn = document.querySelector('#bluBtn');
-const orgBtn = document.querySelector('#orgBtn');
+const ylwBtn = document.querySelector('#ylwBtn');
 
 // controls
 const playStartBtn = document.querySelector('#startGame');
 const playAgainBtn = document.querySelector('#playAgain');
-const quirGameBtn = document.querySelector('#quitGame');
+const quitGameBtn = document.querySelector('#quitGame');
 
 
   /*----- event listeners -----*/
@@ -55,10 +55,10 @@ const quirGameBtn = document.querySelector('#quitGame');
 
 
 /*----- functions -----*/
-// init();
+init();
 
 function init() {
-  
+  playAgainBtn.style.display = 'none';
 }
 
 function winLossFunc(winLoss) {
@@ -69,12 +69,20 @@ function winLossFunc(winLoss) {
   }
 }
 
-// On click works
-playAgainBtn.onclick = function () {
-  winLossFunc('w');
+playStartBtn.onclick = function () {
+  playStartBtn.style.display = 'none';
 };
 
- 
+// Clicking quit = You Lose, need to also unhide play again
+quitGameBtn.onclick = function () {
+  winLossFunc('l');
+  playAgainBtn.style.display = '';
+};
+
+playAgainBtn.onclick = function () {
+  // playAgain();
+  playAgainBtn.style.display = 'none';
+}
 
 
 
