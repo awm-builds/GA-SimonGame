@@ -116,6 +116,7 @@ function setPattern() {
   return numGen;
 }
 
+// cpuTurn test passed
 function cpuTurn() { 
   level += 1;
   const livePattern = [...cpuNums];
@@ -123,7 +124,7 @@ function cpuTurn() {
   // return livePattern;
 }
 
-console.log(cpuTurn());
+// console.log(cpuTurn());
 
 /*
 function playRound(livePattern) { 
