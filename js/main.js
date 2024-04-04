@@ -1,20 +1,4 @@
   /*----- constants -----*/
-
-// text messages
-const winLossText = document.querySelector("#winLossText");
-
-
-// color selections
-const redBtn = document.querySelector('#redBtn').addEventListener('click', playStart);
-const grnBtn = document.querySelector('#grnBtn').addEventListener('click', playStart);
-const bluBtn = document.querySelector('#bluBtn').addEventListener('click', playStart);
-const orgBtn = document.querySelector('#orgBtn').addEventListener('click', playStart);
-
-// controls
-const playStartBtn = document.querySelector('#startGame').addEventListener('click', playStart);
-const playAgainBtn = document.querySelector('#playAgain').addEventListener('click', playAgain);
-const quirGameBtn = document.querySelector('#quitGame').addEventListener('click', quitGame);
-
 // Objects
 const winLossTexts = [
   {
@@ -43,16 +27,37 @@ const playQuitBtns = [
 ];
 
   /*----- state variables -----*/
+let board;
+let turn;
+let winner;
 
 
   /*----- cached elements  -----*/
+// text messages
+const winLossText = document.querySelector("#winLossText");
+
+
+// color selections
+const redBtn = document.querySelector('#redBtn').addEventListener('click', );
+const grnBtn = document.querySelector('#grnBtn').addEventListener('click', );
+const bluBtn = document.querySelector('#bluBtn').addEventListener('click', );
+const orgBtn = document.querySelector('#orgBtn').addEventListener('click', );
+
+// controls
+const playStartBtn = document.querySelector('#startGame').addEventListener('click', playStart);
+const playAgainBtn = document.querySelector('#playAgain').addEventListener('click', playAgain);
+const quirGameBtn = document.querySelector('#quitGame').addEventListener('click', quitGame);
 
 
   /*----- event listeners -----*/
 
 
+
 /*----- functions -----*/
-  
+// init();
+
+board = [redBtn, grnBtn, bluBtn, orgBtn];
+
 
 
 
