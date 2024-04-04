@@ -1,8 +1,6 @@
   /*----- constants -----*/
 
 
-
-
 // Objects
 const winLossTexts = [
   {
@@ -36,6 +34,7 @@ let turn;  // Cur player turn --> 0/1
 let winLoseSwtc;
 let cpuNums = [];
 let playerNums = [];
+let level = 0;
 
   /*----- cached elements  -----*/
 // text messages
@@ -56,11 +55,14 @@ const quitGameBtn = document.querySelector('#quitGame');
 
   /*----- event listeners -----*/
 redBtn.addEventListener('click', playBtn);
+grnBtn.addEventListener('click', playBtn);
+bluBtn.addEventListener('click', playBtn);
+ylwBtn.addEventListener('click', playBtn);
 
 // event test
 const playNew = new Audio;
 
-function playBtn(name) {
+function playBtn() {
   playNew.src = 'audio/pickBtnSnd.wav';
   playNew.play();
 }
@@ -114,15 +116,29 @@ function setPattern() {
   return numGen;
 }
 
-// console.log(setPattern());
-
+// cpuTurn test passed
 function cpuTurn() { 
+  level += 1;
   const livePattern = [...cpuNums];
   livePattern.push(setPattern());
+  // return livePattern;
 }
 
 // console.log(cpuTurn());
 
+/*
+function playRound(livePattern) { 
+  livePattern.forEach(
+    (btn, idx) => { 
+      setTimeout(
+        () => {
+          // trigger click btn func   
+          // function(Btn)
+        }, * 400);
+    }
+  )
+}
+*/
 
 
 
