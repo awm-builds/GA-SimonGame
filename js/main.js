@@ -37,18 +37,18 @@ let playerNums = [];
 // text messages
 const winLossText = document.querySelector("#winLossText");
 
-/*
+
 // color selections
-const redBtn = document.querySelector('#redBtn').addEventListener('click', slctRed);
-const grnBtn = document.querySelector('#grnBtn').addEventListener('click', slctGrn);
-const bluBtn = document.querySelector('#bluBtn').addEventListener('click', slctBlu);
-const orgBtn = document.querySelector('#orgBtn').addEventListener('click', slctOrg);
+const redBtn = document.querySelector('#redBtn');
+const grnBtn = document.querySelector('#grnBtn');
+const bluBtn = document.querySelector('#bluBtn');
+const orgBtn = document.querySelector('#orgBtn');
 
 // controls
-const playStartBtn = document.querySelector('#startGame').addEventListener('click', playStart);
-const playAgainBtn = document.querySelector('#playAgain').addEventListener('click', playAgain);
-const quirGameBtn = document.querySelector('#quitGame').addEventListener('click', quitGame);
-*/
+const playStartBtn = document.querySelector('#startGame');
+const playAgainBtn = document.querySelector('#playAgain');
+const quirGameBtn = document.querySelector('#quitGame');
+
 
   /*----- event listeners -----*/
 
@@ -57,6 +57,9 @@ const quirGameBtn = document.querySelector('#quitGame').addEventListener('click'
 /*----- functions -----*/
 // init();
 
+function init() {
+  
+}
 
 function winLossFunc(winLoss) {
   if (winLoss === 'w') {
@@ -66,7 +69,12 @@ function winLossFunc(winLoss) {
   }
 }
 
-winLossFunc(winSwtc);
+// On click works
+playAgainBtn.onclick = function () {
+  winLossFunc('w');
+};
+
+ 
 
 
 
