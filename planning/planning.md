@@ -263,3 +263,35 @@ if (JSON.stringify(arr1) == JSON.stringify(arr2))
 else
     console.log("False");
 
+
+
+CSS
+
+
+#colorSlct {
+}
+
+#statsUI {
+    /* display: none; */
+}
+
+#controls {
+    /* display: none; */
+}
+
+#text {
+    /* display: none; */
+}
+
+#timerNum {
+    /* display: none; */
+}
+
+#turnName {
+    /* display: none; */
+}
+
+#winNum {
+    /* display: none; */
+}
+

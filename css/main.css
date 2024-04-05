@@ -18,17 +18,6 @@
     cursor: pointer;
 }
 
-.Hide-Btn 
-{
-    padding: 0.8rem;
-    width: 100px;
-    border-radius: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    opacity: .5;
-}
-
 #redBtn {
   background-color: red;
   opacity: .3;
@@ -45,33 +34,5 @@
   background-color: rgb(215, 198, 13);
   opacity: .3;
 }
-
-#colorSlct {
-}
-
-#statsUI {
-    /* display: none; */
-}
-
-#controls {
-    /* display: none; */
-}
-
-#text {
-    /* display: none; */
-}
-
-#timerNum {
-    /* display: none; */
-}
-
-#turnName {
-    /* display: none; */
-}
-
-#winNum {
-    /* display: none; */
-}
-
 
 

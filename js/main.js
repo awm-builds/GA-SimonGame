@@ -84,19 +84,15 @@ init();
 // Player input
 function addRed() {
   playerNums.push(0);
-  console.log(playerNums);
 }
 function addGrn() {
   playerNums.push(1);
-  console.log(playerNums);
 }
  function addBlu() {
   playerNums.push(2);
-  console.log(playerNums);
 }
  function addYlw() {
   playerNums.push(3);
-  console.log(playerNums);
  }
 
 function playSndBtn() {
@@ -153,22 +149,18 @@ const cpuFuncPic = [
 function redAct() { 
   lightUp(redBtn);
   playSndBtn();
-  console.log('Red Works!');
 }
 function grnAct() { 
   lightUp(grnBtn);
   playSndBtn();
-  console.log('Green Works!');
 }
 function bluAct() { 
   lightUp(bluBtn);
   playSndBtn();
-  console.log('Blue Works!');
 }
 function ylwAct() { 
   lightUp(ylwBtn);
   playSndBtn();
-  console.log('Yellow Works!');
 }
 
 // starGame - play/playAgain logic
@@ -184,7 +176,6 @@ function startGame() {
   // livePattern() creates CPU pattern and stores array value in cpuNums
   livePattern();
   cpuNums = gamePattern;
-  // Test Iteration
   // Returns a Promise that resolves after "ms" Milliseconds
   const timer = ms => new Promise(res => setTimeout(res, ms))
   // Start Level - Triggers the CPU's turn, calls functions from an array on each interval
@@ -214,18 +205,17 @@ function lightUp(btn) {
     }, 400);
 }
 
-
+// Game Turn func
 function gameTurn(turnVal) { 
   if (turnVal === true) {
-    // change turn text: CPU
     turnName.innerText = turnDspl[0]["button text"];
   } else if (turnVal === false) {
-    // change turn text: Player
     turnName.innerText = turnDspl[1]["button text"];
   }
 
 }
 
+// Disable Player Color Select Buttons
 function disableBtns() { 
   redBtn.setAttribute('disabled', true);
   grnBtn.setAttribute('disabled', true);
@@ -233,6 +223,7 @@ function disableBtns() {
   ylwBtn.setAttribute('disabled', true);
 }
 
+// Enable Player Color Select Buttons
 function enableBtns() { 
   redBtn.disabled = false;
   grnBtn.disabled = false;
@@ -240,12 +231,11 @@ function enableBtns() {
   ylwBtn.disabled = false;
 }
 
-// Compare two arrays, cpu and player pick
+// Compare CPU & Player Arrays - return win/loss
 function numCompare() {
   if (cpuNums.length === playerNums.length) {
     disableBtns();
     if (JSON.stringify(cpuNums) == JSON.stringify(playerNums)) {
-      console.log('numCompare true');
       winLossFunc('w');
     } else if (JSON.stringify(cpuNums) != JSON.stringify(playerNums)){
       winLossFunc('l');
