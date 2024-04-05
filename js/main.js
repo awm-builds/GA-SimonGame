@@ -56,16 +56,16 @@ const quitGameBtn = document.querySelector('#quitGame');
 
 
   /*----- event listeners -----*/
-redBtn.addEventListener('click', playBtn);
-grnBtn.addEventListener('click', playBtn);
-bluBtn.addEventListener('click', playBtn);
-ylwBtn.addEventListener('click', playBtn);
+redBtn.addEventListener('click', playSndBtn);
+grnBtn.addEventListener('click', playSndBtn);
+bluBtn.addEventListener('click', playSndBtn);
+ylwBtn.addEventListener('click', playSndBtn);
 
 // event test
 
 
 
-function playBtn() {
+function playSndBtn() {
   playNew.src = 'audio/pickBtnSnd.wav';
   playNew.play();
 }
@@ -83,6 +83,10 @@ render(){
 }
 */
 
+function startGame() { 
+
+}
+
 function winLossFunc(winLoss) {
   if (winLoss === 'w') {
     winLossText.innerText = winLossTexts[0]["button text"];
@@ -98,6 +102,7 @@ playStartBtn.onclick = function () {
 
 // Clicking quit = You Lose, need to also unhide play again
 quitGameBtn.onclick = function () {
+  // quitGame();
   winLossFunc('l');
   playAgainBtn.style.display = '';
 };
@@ -107,14 +112,12 @@ playAgainBtn.onclick = function () {
   playAgainBtn.style.display = 'none';
 }
 
-function playBtn() {
+function playSndBtn() {
   playNew.src = 'audio/pickBtnSnd.wav';
   playNew.play();
 }
 
-function startGame() { 
 
-}
 
 // Test Iteration Func
 const boardSlcts = [0, 1, 2, 3];
@@ -155,22 +158,22 @@ const cpuFuncPic = [
 
 function redAct() { 
   lightUp(redBtn);
-  playBtn();
+  playSndBtn();
   console.log('Red Works!');
 }
 function grnAct() { 
   lightUp(grnBtn);
-  playBtn();
+  playSndBtn();
   console.log('Green Works!');
 }
 function bluAct() { 
   lightUp(bluBtn);
-  playBtn();
+  playSndBtn();
   console.log('Blue Works!');
 }
 function ylwAct() { 
   lightUp(ylwBtn);
-  playBtn();
+  playSndBtn();
   console.log('Yellow Works!');
 }
 
