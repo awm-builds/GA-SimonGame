@@ -183,6 +183,7 @@ function ylwAct() {
 }
 
 function startGame() {
+  playAgainBtn.setAttribute('disabled', true);
   gamePattern = [];
   cpuNums = [];
   // livePattern() creates CPU pattern and stores array value in cpuNums
@@ -197,18 +198,20 @@ function startGame() {
       cpuFuncPic[gamePattern[i]]();
       await timer(1000);
     }
+  playAgainBtn.disabled = false;
   }
-    startLevel();
+  startLevel();
+  
 }
 
 // Test set interval
 function lightUp(btn) {
-  const timerId = setInterval(function() {
+  const btnFlash = setInterval(function() {
     btn.style.opacity = 1;
-    setTimeout(function() {
+    const timerID = setTimeout(function() {
       btn.style.opacity = 0.3;
     }, 600);
-      clearInterval(timerId);
+      clearInterval(btnFlash);
     }, 400);
 }
 
@@ -224,4 +227,6 @@ if (cpuNums.length == playerNums.length) {
   }
 }
 
-console.log('CPU Length: '+cpuNums.length);
+console.log('CPU Length: ' + cpuNums.length);
+
+
