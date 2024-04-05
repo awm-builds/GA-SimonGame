@@ -70,12 +70,16 @@ const quitGameBtn = document.querySelector('#quitGame');
   /*----- event listeners -----*/
 redBtn.addEventListener('click', playSndBtn);
 redBtn.addEventListener('click', addRed);
+redBtn.addEventListener('click', numCompare);
 grnBtn.addEventListener('click', playSndBtn);
 grnBtn.addEventListener('click', addGrn);
+grnBtn.addEventListener('click', numCompare);
 bluBtn.addEventListener('click', playSndBtn);
 bluBtn.addEventListener('click', addBlu);
+bluBtn.addEventListener('click', numCompare);
 ylwBtn.addEventListener('click', playSndBtn);
 ylwBtn.addEventListener('click', addYlw);
+ylwBtn.addEventListener('click', numCompare);
 
 // event test
 function addRed() {
@@ -122,6 +126,8 @@ function winLossFunc(winLoss) {
     winLossText.innerText = winLossTexts[0]["button text"];
   } else if (winLoss === 'l') {
     winLossText.innerText = winLossTexts[1]["button text"];
+  } else if ('n') { 
+    winLossText.innerText = '';
   }
 }
 
@@ -138,6 +144,7 @@ quitGameBtn.onclick = function () {
 };
 
 playAgainBtn.onclick = function () {
+  winLossFunc('n');
   startGame();
   playAgainBtn.style.display = 'none';
 }
@@ -202,6 +209,7 @@ function startGame() {
   playAgainBtn.style.opacity = .2;
   turn = true;
   gameTurn(turn);
+  playerNums = [];
   gamePattern = [];
   cpuNums = [];
   // livePattern() creates CPU pattern and stores array value in cpuNums
@@ -277,5 +285,15 @@ function enableBtns() {
   ylwBtn.disabled = false;
 }
 
-
-
+// Compare two arrays, cpu and player pick
+function numCompare() {
+  if (cpuNums.length === playerNums.length) {
+    disableBtns();
+    if (JSON.stringify(cpuNums) == JSON.stringify(playerNums)) {
+      console.log('numCompare true');
+      winLossFunc('w');
+    } else if (JSON.stringify(cpuNums) != JSON.stringify(playerNums)){
+      winLossFunc('l');
+    }
+  }
+}
