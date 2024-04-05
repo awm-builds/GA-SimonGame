@@ -248,3 +248,18 @@ function iterate(item) {
 <span class="winsTtl">Wins: <strong><span id="winNum">0</span></strong></span>
 
 
+
+
+// Compare two arrays
+
+
+// Declare two arrays
+let arr1 = [1, 2, 3, 5];
+let arr2 = [1, 2, 3, 5];
+ 
+// Comparing both arrays using stringify method
+if (JSON.stringify(arr1) == JSON.stringify(arr2))
+    console.log("True");
+else
+    console.log("False");
+

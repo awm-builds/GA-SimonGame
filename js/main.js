@@ -53,6 +53,7 @@ let level = 0;
 // text messages
 const winLossText = document.querySelector("#winLossText");
 const turnName = document.querySelector("#turnName");
+const clrElBtns = document.querySelector("colorSlct");
 
 // color selections
 const redBtn = document.querySelector('#redBtn');
@@ -101,13 +102,15 @@ function playSndBtn() {
 
 
 /*----- functions -----*/
-init();
+
 
 function init() {
   playAgainBtn.style.display = 'none';
+  disableBtns();
   // render();
 }
 
+init();
 /*
 render(){
 }
@@ -194,6 +197,7 @@ function ylwAct() {
 }
 
 function startGame() {
+  disableBtns();
   playAgainBtn.setAttribute('disabled', true);
   playAgainBtn.style.opacity = .2;
   turn = true;
@@ -215,6 +219,7 @@ function startGame() {
     playAgainBtn.style.opacity = 1;
     playAgainBtn.disabled = false;
     turn = false;
+    enableBtns();
     gameTurn(turn);
   }
   startLevel();
@@ -257,4 +262,20 @@ function gameTurn(turnVal) {
   }
 
 }
+
+function disableBtns() { 
+  redBtn.setAttribute('disabled', true);
+  grnBtn.setAttribute('disabled', true);
+  bluBtn.setAttribute('disabled', true);
+  ylwBtn.setAttribute('disabled', true);
+}
+
+function enableBtns() { 
+  redBtn.disabled = false;
+  grnBtn.disabled = false;
+  bluBtn.disabled = false;
+  ylwBtn.disabled = false;
+}
+
+
 
