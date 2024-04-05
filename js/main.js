@@ -83,11 +83,11 @@ function addGrn() {
   console.log(playerNums);
  }
 
-
 function playSndBtn() {
   playNew.src = 'audio/pickBtnSnd.wav';
   playNew.play();
 }
+
 
 /*----- functions -----*/
 init();
@@ -102,9 +102,6 @@ render(){
 }
 */
 
-function startGame() { 
-
-}
 
 function winLossFunc(winLoss) {
   if (winLoss === 'w') {
@@ -115,7 +112,7 @@ function winLossFunc(winLoss) {
 }
 
 playStartBtn.onclick = function () {
-  // startGame();
+  startGame();
   playStartBtn.style.display = 'none';
 };
 
@@ -127,7 +124,7 @@ quitGameBtn.onclick = function () {
 };
 
 playAgainBtn.onclick = function () {
-  // playAgain();
+  startGame();
   playAgainBtn.style.display = 'none';
 }
 
@@ -185,28 +182,31 @@ function ylwAct() {
   console.log('Yellow Works!');
 }
 
-livePattern();
-cpuNums = gamePattern;
-// Test Iteration
-
-// Returns a Promise that resolves after "ms" Milliseconds
-const timer = ms => new Promise(res => setTimeout(res, ms))
-
-// async fixes nested loop issue
-async function load () {
-  for (i = 0; i < gamePattern.length; i++) {
-    cpuFuncPic[gamePattern[i]]();
-    await timer(1000);
+function startGame() {
+  gamePattern = [];
+  cpuNums = [];
+  // livePattern() creates CPU pattern and stores array value in cpuNums
+  livePattern();
+  cpuNums = gamePattern;
+  // Test Iteration
+  // Returns a Promise that resolves after "ms" Milliseconds
+  const timer = ms => new Promise(res => setTimeout(res, ms))
+  // Start Level - Triggers the CPU's turn, calls functions from an array on each interval
+  async function startLevel() {
+    for (i = 0; i < gamePattern.length; i++) {
+      cpuFuncPic[gamePattern[i]]();
+      await timer(1000);
+    }
   }
+    startLevel();
 }
-load();
 
 // Test set interval
 function lightUp(btn) {
   const timerId = setInterval(function() {
     btn.style.opacity = 1;
     setTimeout(function() {
-      btn.style.opacity = 0.5;
+      btn.style.opacity = 0.3;
     }, 600);
       clearInterval(timerId);
     }, 400);
@@ -224,3 +224,4 @@ if (cpuNums.length == playerNums.length) {
   }
 }
 
+console.log('CPU Length: '+cpuNums.length);
