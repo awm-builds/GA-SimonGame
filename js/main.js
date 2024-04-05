@@ -155,22 +155,22 @@ const cpuFuncPic = [
 
 function redAct() { 
   lightUp(redBtn);
-  // sound
+  playBtn();
   console.log('Red Works!');
 }
 function grnAct() { 
   lightUp(grnBtn);
-  // Sound
+  playBtn();
   console.log('Green Works!');
 }
 function bluAct() { 
   lightUp(bluBtn);
-  // Sound
+  playBtn();
   console.log('Blue Works!');
 }
 function ylwAct() { 
   lightUp(ylwBtn);
-  // Sound
+  playBtn();
   console.log('Yellow Works!');
 }
 
@@ -181,20 +181,16 @@ livePattern();
 // Returns a Promise that resolves after "ms" Milliseconds
 const timer = ms => new Promise(res => setTimeout(res, ms))
 
-async function load () { // We need to wrap the loop into an async function for this to work
+// async fixes nested loop issue
+async function load () {
   for (i = 0; i < gamePattern.length; i++) {
     cpuFuncPic[gamePattern[i]]();
     await timer(1000);
   }
 }
-
 load();
 
-
-
-
 // Test set interval
-
 function lightUp(btn) {
   const timerId = setInterval(function() {
     btn.style.opacity = 1;
@@ -202,10 +198,7 @@ function lightUp(btn) {
       btn.style.opacity = 0.5;
     }, 600);
       clearInterval(timerId);
-    // setTimeout(cb, 900);
-    }, 900);
+    }, 400);
 }
-
-
 
 
