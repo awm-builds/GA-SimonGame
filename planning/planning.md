@@ -171,6 +171,57 @@ function playLevel(livePattern) {
 
 
 
-HTML - Work in progress
+
+/*
+// Picks 1 of 4 numbers   // Test passed
+function setPattern() { 
+  const boardSlcts = [ 5, 6, 7, 8]; // redBtn, grnBtn, bluBtn, ylwBtn
+  const numGen = boardSlcts[Math.floor(Math.random() * boardSlcts.length)];
+
+  return numGen;
+}
+
+// cpuTurn test passed
+function cpuTurn() { 
+  // level += 1;
+  const livePattern = [...cpuNums];
+  livePattern.push(setPattern());
+  // return livePattern;
+}
+*/
+
+// console.log(cpuTurn());
+
+/*
+function playRound(livePattern) { 
+  livePattern.forEach(
+    (btn, idx) => { 
+      setTimeout(
+        () => {
+          // trigger click btn func   
+          // function(Btn)
+        }, * 400);
+    }
+  )
+}
+*/
 
 
+// let randomBtn = boardSlcts[setPattern()];
+// gamePattern.push(randomBtn);
+// console.log(randomBtn);
+// console.log(gamePattern);
+
+
+
+// console.log(livePattern());
+
+// const colors = ['blue', 'green', 'white'];
+/*
+function btnLog(...idx) {
+  console.log(boardSlcts[idx]);
+  // playBtn();
+}
+
+console.log(btnLog());
+*/

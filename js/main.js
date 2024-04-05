@@ -116,39 +116,30 @@ function startGame() {
 
 }
 
-// Picks 1 of 4 numbers   // Test passed
-function setPattern() { 
-  const boardSlcts = [ 5, 6, 7, 8]; /*redBtn, grnBtn, bluBtn, ylwBtn*/
-  const numGen = boardSlcts[Math.floor(Math.random() * boardSlcts.length)];
+// Test Iteration Func
+const boardSlcts = [0, 1, 2, 3];
+let gamePattern = [];
+let userClickedPattern = [];
 
-  return numGen;
+const numGen = Math.floor(Math.random() * 4);
+
+let difLvl = 7;
+
+function livePattern() {
+  userClickedPattern = [];
+  for (i = 0; i < difLvl; i++) {
+    const numGen = Math.floor(Math.random() * 4);
+    let randomBtn = boardSlcts[numGen];
+    gamePattern.push(randomBtn);
+  }
+    return gamePattern;
 }
 
-// cpuTurn test passed
-function cpuTurn() { 
-  // level += 1;
-  const livePattern = [...cpuNums];
-  livePattern.push(setPattern());
-  // return livePattern;
+function iterate(item) {
+  console.log(item);
 }
 
-// console.log(cpuTurn());
-
-/*
-function playRound(livePattern) { 
-  livePattern.forEach(
-    (btn, idx) => { 
-      setTimeout(
-        () => {
-          // trigger click btn func   
-          // function(Btn)
-        }, * 400);
-    }
-  )
-}
-*/
-
-
+livePattern().forEach(iterate);
 
 
 
