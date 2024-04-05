@@ -1,10 +1,7 @@
   /*----- constants -----*/
 
-<<<<<<< HEAD
-=======
 const playNew = new Audio;
 
->>>>>>> 1-Test_ItrFunc
 
 // Objects
 const winLossTexts = [
@@ -66,11 +63,8 @@ ylwBtn.addEventListener('click', playBtn);
 
 // event test
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 1-Test_ItrFunc
 function playBtn() {
   playNew.src = 'audio/pickBtnSnd.wav';
   playNew.play();
@@ -141,39 +135,11 @@ function livePattern() {
     return gamePattern;
 }
 
-<<<<<<< HEAD
-// cpuTurn test passed
-function cpuTurn() { 
-  level += 1;
-  const livePattern = [...cpuNums];
-  livePattern.push(setPattern());
-  // return livePattern;
-}
-
-// console.log(cpuTurn());
-
-/*
-function playRound(livePattern) { 
-  livePattern.forEach(
-    (btn, idx) => { 
-      setTimeout(
-        () => {
-          // trigger click btn func   
-          // function(Btn)
-        }, * 400);
-    }
-  )
-}
-*/
-
-
-=======
 function iterate(item) {
   console.log(item);
 }
 
 livePattern().forEach(iterate);
->>>>>>> 1-Test_ItrFunc
 
 
 
