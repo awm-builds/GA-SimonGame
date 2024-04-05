@@ -154,22 +154,22 @@ const cpuFuncPic = [
 
 
 function redAct() { 
-  // lightUp();
+  lightUp(redBtn);
   // Sound
   console.log('Red Works!');
 }
 function grnAct() { 
-  // lightUp();
+  lightUp(grnBtn);
   // Sound
   console.log('Green Works!');
 }
 function bluAct() { 
-  // lightUp();
+  lightUp(bluBtn);
   // Sound
   console.log('Blue Works!');
 }
 function ylwAct() { 
-  // lightUp();
+  lightUp(ylwBtn);
   // Sound
   console.log('Yellow Works!');
 }
@@ -177,11 +177,24 @@ function ylwAct() {
 livePattern();
 
 for (i = 0; i < gamePattern.length; i++) {
-  cpuFuncPic[gamePattern[i]]();
- }
-
-function lightUp() {
-  
+  setInterval(cpuFuncPic[gamePattern[i]](), 2000);
  }
 
 
+// Test set interval
+
+function lightUp(btn) {
+  const timerId = setInterval(function() {
+    btn.style.opacity = 1;
+    setTimeout(function() {
+      btn.style.opacity = 0.5;
+    }, 600);
+      clearInterval(timerId);
+    // setTimeout(cb, 900);
+    }, 900);
+}
+
+
+setTimeout(() => {
+    console.log(mode)
+  }, index * interval)

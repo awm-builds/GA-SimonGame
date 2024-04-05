@@ -31,15 +31,22 @@
 
 #redBtn {
   background-color: red;
+  opacity: .5;
 }
 #grnBtn {
   background-color: green;
+  opacity: .5;
 }
 #bluBtn {
   background-color: blue;
+  opacity: .5;
 }
 #ylwBtn {
   background-color: rgb(215, 198, 13);
+  opacity: .5;
+}
+
+#colorSlct {
 }
 
 #statsUI {
