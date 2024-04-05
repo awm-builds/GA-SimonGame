@@ -26,17 +26,17 @@ const turnDspl = [
   }
 ];
 
+const boardSlcts = [0, 1, 2, 3];
+const numGen = Math.floor(Math.random() * 4);
+const difLvl = Math.floor(Math.random()*4)+4;
+
   /*----- state variables -----*/
 let turn;
 let winLoseSwtc;
 let cpuNums = [];
 let playerNums = [];
-const boardSlcts = [0, 1, 2, 3];
 let gamePattern = [];
 let userClickedPattern = [];
-
-const numGen = Math.floor(Math.random() * 4);
-let difLvl = Math.floor(Math.random()*4)+4;
 
   /*----- cached elements  -----*/
 // text messages
@@ -72,7 +72,7 @@ ylwBtn.addEventListener('click', numCompare);
 
 /*----- functions -----*/
 
-
+// initiate
 function init() {
   playAgainBtn.style.display = 'none';
   disableBtns();
