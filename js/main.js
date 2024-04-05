@@ -1,5 +1,10 @@
   /*----- constants -----*/
 
+<<<<<<< HEAD
+=======
+const playNew = new Audio;
+
+>>>>>>> 1-Test_ItrFunc
 
 // Objects
 const winLossTexts = [
@@ -60,8 +65,12 @@ bluBtn.addEventListener('click', playBtn);
 ylwBtn.addEventListener('click', playBtn);
 
 // event test
-const playNew = new Audio;
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1-Test_ItrFunc
 function playBtn() {
   playNew.src = 'audio/pickBtnSnd.wav';
   playNew.play();
@@ -104,18 +113,35 @@ playAgainBtn.onclick = function () {
   playAgainBtn.style.display = 'none';
 }
 
+function playBtn() {
+  playNew.src = 'audio/pickBtnSnd.wav';
+  playNew.play();
+}
+
 function startGame() { 
 
 }
 
-// Picks 1 of 4 numbers   // Test passed
-function setPattern() { 
-  const boardSlcts = [ 5, 6, 7, 8]; /*redBtn, grnBtn, bluBtn, ylwBtn*/
-  const numGen = boardSlcts[Math.floor(Math.random() * boardSlcts.length)];
+// Test Iteration Func
+const boardSlcts = [0, 1, 2, 3];
+let gamePattern = [];
+let userClickedPattern = [];
 
-  return numGen;
+const numGen = Math.floor(Math.random() * 4);
+
+let difLvl = 7;
+
+function livePattern() {
+  userClickedPattern = [];
+  for (i = 0; i < difLvl; i++) {
+    const numGen = Math.floor(Math.random() * 4);
+    let randomBtn = boardSlcts[numGen];
+    gamePattern.push(randomBtn);
+  }
+    return gamePattern;
 }
 
+<<<<<<< HEAD
 // cpuTurn test passed
 function cpuTurn() { 
   level += 1;
@@ -141,6 +167,13 @@ function playRound(livePattern) {
 */
 
 
+=======
+function iterate(item) {
+  console.log(item);
+}
+
+livePattern().forEach(iterate);
+>>>>>>> 1-Test_ItrFunc
 
 
 
