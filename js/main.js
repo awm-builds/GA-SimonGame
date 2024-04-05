@@ -123,7 +123,7 @@ let userClickedPattern = [];
 
 const numGen = Math.floor(Math.random() * 4);
 
-let difLvl = 7;
+let difLvl = Math.floor(Math.random()*8)+4;
 
 function livePattern() {
   userClickedPattern = [];
@@ -135,12 +135,50 @@ function livePattern() {
     return gamePattern;
 }
 
+/*
+// Iterate array into single values
 function iterate(item) {
-  console.log(item);
+  // console.log(item);
 }
 
-livePattern().forEach(iterate);
+// livePattern().forEach(iterate);
+*/
 
+
+const cpuFuncPic = [
+  redAct,
+  grnAct,
+  bluAct,
+  ylwAct
+];
+
+
+function redAct() { 
+  // lightUp();
+  // Sound
+  console.log('Red Works!');
+}
+function grnAct() { 
+  // lightUp();
+  // Sound
+  console.log('Green Works!');
+}
+function bluAct() { 
+  // lightUp();
+  // Sound
+  console.log('Blue Works!');
+}
+function ylwAct() { 
+  // lightUp();
+  // Sound
+  console.log('Yellow Works!');
+}
+
+livePattern();
+
+for (i = 0; i < gamePattern.length; i++) {
+  cpuFuncPic[gamePattern[i]]();
+ }
 
 
 
