@@ -33,11 +33,11 @@ const playQuitBtns = [
 const turnDspl = [
   {
     name: "CPU's turn",
-    "button text": "Simon's Turn",
+    "button text": "Simon",
   },
   {
     name: "Player's turn",
-    "button text": "Player's Turn"
+    "button text": "Player"
   }
 ];
 
@@ -52,7 +52,7 @@ let level = 0;
   /*----- cached elements  -----*/
 // text messages
 const winLossText = document.querySelector("#winLossText");
-
+const turnName = document.querySelector("#turnName");
 
 // color selections
 const redBtn = document.querySelector('#redBtn');
@@ -196,7 +196,8 @@ function ylwAct() {
 function startGame() {
   playAgainBtn.setAttribute('disabled', true);
   playAgainBtn.style.opacity = .2;
-  // turn = true;
+  turn = true;
+  gameTurn(turn);
   gamePattern = [];
   cpuNums = [];
   // livePattern() creates CPU pattern and stores array value in cpuNums
@@ -213,7 +214,8 @@ function startGame() {
     }
     playAgainBtn.style.opacity = 1;
     playAgainBtn.disabled = false;
-    // turn = false;
+    turn = false;
+    gameTurn(turn);
   }
   startLevel();
   
@@ -248,8 +250,10 @@ console.log('CPU Length: ' + cpuNums.length);
 function gameTurn(turnVal) { 
   if (turnVal === true) {
     // change turn text: CPU
-  } else if (turnVal === flase) {
+    turnName.innerText = turnDspl[0]["button text"];
+  } else if (turnVal === false) {
     // change turn text: Player
+    turnName.innerText = turnDspl[1]["button text"];
   }
 
 }

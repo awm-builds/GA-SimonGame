@@ -245,5 +245,6 @@ function iterate(item) {
 // livePattern().forEach(iterate);
 */
 
+<span class="winsTtl">Wins: <strong><span id="winNum">0</span></strong></span>
 
 
