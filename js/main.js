@@ -30,6 +30,17 @@ const playQuitBtns = [
   }
 ];
 
+const turnDspl = [
+  {
+    name: "CPU's turn",
+    "button text": "Simon's Turn",
+  },
+  {
+    name: "Player's turn",
+    "button text": "Player's Turn"
+  }
+];
+
   /*----- state variables -----*/
 let board;  // Array ref 4 color selections
 let turn;  // Cur player turn --> 0/1
@@ -184,6 +195,8 @@ function ylwAct() {
 
 function startGame() {
   playAgainBtn.setAttribute('disabled', true);
+  playAgainBtn.style.opacity = .2;
+  // turn = true;
   gamePattern = [];
   cpuNums = [];
   // livePattern() creates CPU pattern and stores array value in cpuNums
@@ -198,7 +211,9 @@ function startGame() {
       cpuFuncPic[gamePattern[i]]();
       await timer(1000);
     }
-  playAgainBtn.disabled = false;
+    playAgainBtn.style.opacity = 1;
+    playAgainBtn.disabled = false;
+    // turn = false;
   }
   startLevel();
   
@@ -229,4 +244,13 @@ if (cpuNums.length == playerNums.length) {
 
 console.log('CPU Length: ' + cpuNums.length);
 
+
+function gameTurn(turnVal) { 
+  if (turnVal === true) {
+    // change turn text: CPU
+  } else if (turnVal === flase) {
+    // change turn text: Player
+  }
+
+}
 
