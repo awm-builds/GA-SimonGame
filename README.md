@@ -5,8 +5,7 @@ The device creates a series of tones and lights and requires a user to repeat th
 
 # Screenshot
 
-<img src="url to your image on imgur">
-<img src="url to your image on imgur">
+<img src="img/gameScreenShot.JPG">
 
 # Technologies Used
 
