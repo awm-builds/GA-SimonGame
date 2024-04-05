@@ -107,7 +107,7 @@ playAgainBtn.onclick = function () {
   playAgainBtn.style.display = 'none';
 }
 
-function playBtn(name) {
+function playBtn() {
   playNew.src = 'audio/pickBtnSnd.wav';
   playNew.play();
 }
@@ -126,7 +126,7 @@ function setPattern() {
 
 // cpuTurn test passed
 function cpuTurn() { 
-  level += 1;
+  // level += 1;
   const livePattern = [...cpuNums];
   livePattern.push(setPattern());
   // return livePattern;
