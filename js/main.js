@@ -155,7 +155,7 @@ const cpuFuncPic = [
 
 function redAct() { 
   lightUp(redBtn);
-  // Sound
+  // sound
   console.log('Red Works!');
 }
 function grnAct() { 
@@ -176,9 +176,21 @@ function ylwAct() {
 
 livePattern();
 
-for (i = 0; i < gamePattern.length; i++) {
-  setInterval(cpuFuncPic[gamePattern[i]](), 2000);
- }
+// Test Iteration
+
+// Returns a Promise that resolves after "ms" Milliseconds
+const timer = ms => new Promise(res => setTimeout(res, ms))
+
+async function load () { // We need to wrap the loop into an async function for this to work
+  for (i = 0; i < gamePattern.length; i++) {
+    cpuFuncPic[gamePattern[i]]();
+    await timer(1000);
+  }
+}
+
+load();
+
+
 
 
 // Test set interval
@@ -195,6 +207,5 @@ function lightUp(btn) {
 }
 
 
-setTimeout(() => {
-    console.log(mode)
-  }, index * interval)
+
+
