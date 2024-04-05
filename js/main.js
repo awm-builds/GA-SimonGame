@@ -15,21 +15,6 @@ const winLossTexts = [
   }
 ];
 
-const playQuitBtns = [
-  {
-    name: "Play button",
-    "button text": "Play",
-  },
-  {
-    name: "Play Again button",
-    "button text": "Play Again",
-  },
-  {
-    name: "Quit Button",
-    "button text": "Quit",
-  }
-];
-
 const turnDspl = [
   {
     name: "CPU's turn",
@@ -42,12 +27,16 @@ const turnDspl = [
 ];
 
   /*----- state variables -----*/
-let board;  // Array ref 4 color selections
-let turn;  // Cur player turn --> 0/1
+let turn;
 let winLoseSwtc;
 let cpuNums = [];
 let playerNums = [];
-let level = 0;
+const boardSlcts = [0, 1, 2, 3];
+let gamePattern = [];
+let userClickedPattern = [];
+
+const numGen = Math.floor(Math.random() * 4);
+let difLvl = Math.floor(Math.random()*4)+4;
 
   /*----- cached elements  -----*/
 // text messages
@@ -81,7 +70,18 @@ ylwBtn.addEventListener('click', playSndBtn);
 ylwBtn.addEventListener('click', addYlw);
 ylwBtn.addEventListener('click', numCompare);
 
-// event test
+/*----- functions -----*/
+
+
+function init() {
+  playAgainBtn.style.display = 'none';
+  disableBtns();
+  // render();
+}
+
+init();
+
+// Player input
 function addRed() {
   playerNums.push(0);
   console.log(playerNums);
@@ -104,23 +104,6 @@ function playSndBtn() {
   playNew.play();
 }
 
-
-/*----- functions -----*/
-
-
-function init() {
-  playAgainBtn.style.display = 'none';
-  disableBtns();
-  // render();
-}
-
-init();
-/*
-render(){
-}
-*/
-
-
 function winLossFunc(winLoss) {
   if (winLoss === 'w') {
     winLossText.innerText = winLossTexts[0]["button text"];
@@ -131,14 +114,13 @@ function winLossFunc(winLoss) {
   }
 }
 
+// Game start/quit controls
 playStartBtn.onclick = function () {
   startGame();
   playStartBtn.style.display = 'none';
 };
 
-// Clicking quit = You Lose, need to also unhide play again
 quitGameBtn.onclick = function () {
-  // quitGame();
   winLossFunc('l');
   playAgainBtn.style.display = '';
 };
@@ -149,22 +131,7 @@ playAgainBtn.onclick = function () {
   playAgainBtn.style.display = 'none';
 }
 
-function playSndBtn() {
-  playNew.src = 'audio/pickBtnSnd.wav';
-  playNew.play();
-}
-
-
-
-// Test Iteration Func
-const boardSlcts = [0, 1, 2, 3];
-let gamePattern = [];
-let userClickedPattern = [];
-
-const numGen = Math.floor(Math.random() * 4);
-
-let difLvl = Math.floor(Math.random()*4)+4;
-
+// creates CPU pattern
 function livePattern() {
   for (i = 0; i < difLvl; i++) {
     const numGen = Math.floor(Math.random() * 4);
@@ -174,6 +141,7 @@ function livePattern() {
     return gamePattern;
 }
 
+// Array of Player Input Func
 const cpuFuncPic = [
   redAct,
   grnAct,
@@ -181,7 +149,7 @@ const cpuFuncPic = [
   ylwAct
 ];
 
-
+// Player Input Func
 function redAct() { 
   lightUp(redBtn);
   playSndBtn();
@@ -203,6 +171,7 @@ function ylwAct() {
   console.log('Yellow Works!');
 }
 
+// starGame - play/playAgain logic
 function startGame() {
   disableBtns();
   playAgainBtn.setAttribute('disabled', true);
@@ -234,7 +203,7 @@ function startGame() {
   
 }
 
-// Test set interval
+// Button light up func
 function lightUp(btn) {
   const btnFlash = setInterval(function() {
     btn.style.opacity = 1;
@@ -244,20 +213,6 @@ function lightUp(btn) {
       clearInterval(btnFlash);
     }, 400);
 }
-
-console.log(cpuNums);
-
-if (cpuNums.length == playerNums.length) {
-  if (cpuNums == playerNums) {
-    winLoseSwtc = 'w';
-    console.log('You won!');
-  } else {
-    winLoseSwtc = 'l';
-    console.log('You lose.');
-  }
-}
-
-console.log('CPU Length: ' + cpuNums.length);
 
 
 function gameTurn(turnVal) { 
