@@ -76,7 +76,6 @@ ylwBtn.addEventListener('click', numCompare);
 function init() {
   playAgainBtn.style.display = 'none';
   disableBtns();
-  // render();
 }
 
 init();
