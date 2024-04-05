@@ -57,12 +57,31 @@ const quitGameBtn = document.querySelector('#quitGame');
 
   /*----- event listeners -----*/
 redBtn.addEventListener('click', playSndBtn);
+redBtn.addEventListener('click', addRed);
 grnBtn.addEventListener('click', playSndBtn);
+grnBtn.addEventListener('click', addGrn);
 bluBtn.addEventListener('click', playSndBtn);
+bluBtn.addEventListener('click', addBlu);
 ylwBtn.addEventListener('click', playSndBtn);
+ylwBtn.addEventListener('click', addYlw);
 
 // event test
-
+function addRed() {
+  playerNums.push(0);
+  console.log(playerNums);
+}
+function addGrn() {
+  playerNums.push(1);
+  console.log(playerNums);
+}
+ function addBlu() {
+  playerNums.push(2);
+  console.log(playerNums);
+}
+ function addYlw() {
+  playerNums.push(3);
+  console.log(playerNums);
+ }
 
 
 function playSndBtn() {
@@ -126,10 +145,9 @@ let userClickedPattern = [];
 
 const numGen = Math.floor(Math.random() * 4);
 
-let difLvl = Math.floor(Math.random()*8)+4;
+let difLvl = Math.floor(Math.random()*4)+4;
 
 function livePattern() {
-  userClickedPattern = [];
   for (i = 0; i < difLvl; i++) {
     const numGen = Math.floor(Math.random() * 4);
     let randomBtn = boardSlcts[numGen];
@@ -137,16 +155,6 @@ function livePattern() {
   }
     return gamePattern;
 }
-
-/*
-// Iterate array into single values
-function iterate(item) {
-  // console.log(item);
-}
-
-// livePattern().forEach(iterate);
-*/
-
 
 const cpuFuncPic = [
   redAct,
@@ -178,7 +186,7 @@ function ylwAct() {
 }
 
 livePattern();
-
+cpuNums = gamePattern;
 // Test Iteration
 
 // Returns a Promise that resolves after "ms" Milliseconds
@@ -204,4 +212,15 @@ function lightUp(btn) {
     }, 400);
 }
 
+console.log(cpuNums);
+
+if (cpuNums.length == playerNums.length) {
+  if (cpuNums == playerNums) {
+    winLoseSwtc = 'w';
+    console.log('You won!');
+  } else {
+    winLoseSwtc = 'l';
+    console.log('You lose.');
+  }
+}
 

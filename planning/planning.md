@@ -233,3 +233,17 @@ livePattern().forEach((item, index) => {
   //cpuFuncPic[index];
 });
 */
+
+
+
+/*
+// Iterate array into single values
+function iterate(item) {
+  // console.log(item);
+}
+
+// livePattern().forEach(iterate);
+*/
+
+
+
