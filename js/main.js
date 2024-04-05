@@ -180,6 +180,8 @@ for (i = 0; i < gamePattern.length; i++) {
   cpuFuncPic[gamePattern[i]]();
  }
 
-
+function lightUp() {
+  
+ }
 
 
