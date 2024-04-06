@@ -75,6 +75,7 @@ ylwBtn.addEventListener('click', numCompare);
 // initiate
 function init() {
   playAgainBtn.style.display = 'none';
+  quitGameBtn.style.display = 'none';
   disableBtns();
 }
 
@@ -165,8 +166,9 @@ function ylwAct() {
 // starGame - play/playAgain logic
 function startGame() {
   disableBtns();
-  playAgainBtn.setAttribute('disabled', true);
+  playAgainBtn.disabled = true;
   playAgainBtn.style.opacity = .2;
+  quitGameBtn.style.display = '';
   turn = true;
   gameTurn(turn);
   playerNums = [];
@@ -211,15 +213,14 @@ function gameTurn(turnVal) {
   } else if (turnVal === false) {
     turnName.innerText = turnDspl[1]["button text"];
   }
-
 }
 
 // Disable Player Color Select Buttons
 function disableBtns() { 
-  redBtn.setAttribute('disabled', true);
-  grnBtn.setAttribute('disabled', true);
-  bluBtn.setAttribute('disabled', true);
-  ylwBtn.setAttribute('disabled', true);
+  redBtn.disabled = true;
+  grnBtn.disabled = true;
+  bluBtn.disabled = true;
+  ylwBtn.disabled = true;
 }
 
 // Enable Player Color Select Buttons

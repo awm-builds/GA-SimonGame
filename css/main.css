@@ -13,13 +13,13 @@
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
-}
+	}
 
 #turnName {
 	text-align: center;
 	font-size: 20px;
 	margin-top: 1rem;
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 .turnTtl {
@@ -28,26 +28,25 @@
 	margin-top: 1rem;
 }
 
-
 #gameTtl{
 	position: center;
 	top: 50px;
 	font-size: 45px;
 	font-family: "Bebas Neue", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  margin-bottom: 30px;
+	font-weight: 100;
+	font-style: normal;
+	margin-bottom: 30px;
 }
 
 .Btn {
-    padding: 0.8rem;
-    width: 100px;
-    border-radius: 10px;
-    background: #9fb3bf;
-    outline: none;
-    border-color: #ffffff;
-    border: 3px solid;
-    cursor: pointer;
+	padding: 0.8rem;
+	width: 100px;
+	border-radius: 10px;
+	background: #9fb3bf;
+	outline: none;
+	border-color: #ffffff;
+	border: 3px solid;
+	cursor: pointer;
 }
 
 #redBtn {
@@ -66,5 +65,3 @@
   background-color: rgb(215, 198, 13);
   opacity: .3;
 }
-
-
