@@ -254,7 +254,6 @@ function ylwLitUp() {
     }, 200);
 }
 
-
 // Game Turn func
 function gameTurn(turnVal) { 
   if (turnVal === true) {

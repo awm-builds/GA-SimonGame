@@ -28,6 +28,19 @@
 	margin-top: 1rem;
 }
 
+#howTo {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.plyInstr {
+	text-align: center;
+	font-size: 20px;
+	margin-top: 1rem;
+	margin-bottom: 25px;
+}
+
 #gameTtl{
 	position: center;
 	top: 50px;
