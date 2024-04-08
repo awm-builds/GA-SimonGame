@@ -60,15 +60,19 @@ const quitGameBtn = document.querySelector('#quitGame');
 redBtn.addEventListener('click', playSndBtn);
 redBtn.addEventListener('click', addRed);
 redBtn.addEventListener('click', numCompare);
+redBtn.addEventListener('click', redLitUp);
 grnBtn.addEventListener('click', playSndBtn);
 grnBtn.addEventListener('click', addGrn);
 grnBtn.addEventListener('click', numCompare);
+grnBtn.addEventListener('click', grnLitUp);
 bluBtn.addEventListener('click', playSndBtn);
 bluBtn.addEventListener('click', addBlu);
 bluBtn.addEventListener('click', numCompare);
+bluBtn.addEventListener('click', bluLitUp);
 ylwBtn.addEventListener('click', playSndBtn);
 ylwBtn.addEventListener('click', addYlw);
 ylwBtn.addEventListener('click', numCompare);
+ylwBtn.addEventListener('click', ylwLitUp);
 
 /*----- functions -----*/
 
@@ -205,6 +209,51 @@ function lightUp(btn) {
       clearInterval(btnFlash);
     }, 400);
 }
+
+// Red button light up click  func
+function redLitUp() {
+  const btnFlash = setInterval(function() {
+    redBtn.style.opacity = 1;
+    const timerID = setTimeout(function() {
+      redBtn.style.opacity = 0.3;
+    }, 400);
+      clearInterval(btnFlash);
+    }, 200);
+}
+
+// Green button light up click  func
+function grnLitUp() {
+  const btnFlash = setInterval(function() {
+    grnBtn.style.opacity = 1;
+    const timerID = setTimeout(function() {
+      grnBtn.style.opacity = 0.3;
+    }, 400);
+      clearInterval(btnFlash);
+    }, 200);
+}
+
+// Blue button light up click  func
+function bluLitUp() {
+  const btnFlash = setInterval(function() {
+    bluBtn.style.opacity = 1;
+    const timerID = setTimeout(function() {
+      bluBtn.style.opacity = 0.3;
+    }, 400);
+      clearInterval(btnFlash);
+    }, 200);
+}
+
+// Yellow button light up click  func
+function ylwLitUp() {
+  const btnFlash = setInterval(function() {
+    ylwBtn.style.opacity = 1;
+    const timerID = setTimeout(function() {
+      ylwBtn.style.opacity = 0.3;
+    }, 400);
+      clearInterval(btnFlash);
+    }, 200);
+}
+
 
 // Game Turn func
 function gameTurn(turnVal) { 
