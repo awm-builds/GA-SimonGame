@@ -107,6 +107,8 @@ function playSndBtn() {
 function winLossFunc(winLoss) {
   if (winLoss === 'w') {
     winLossText.innerText = winLossTexts[0]["button text"];
+    quitGameBtn.style.display = 'none';
+    playAgainBtn.style.display = '';
   } else if (winLoss === 'l') {
     winLossText.innerText = winLossTexts[1]["button text"];
   } else if ('n') { 
@@ -123,6 +125,7 @@ playStartBtn.onclick = function () {
 quitGameBtn.onclick = function () {
   winLossFunc('l');
   playAgainBtn.style.display = '';
+  quitGameBtn.style.display = 'none';
 };
 
 playAgainBtn.onclick = function () {
