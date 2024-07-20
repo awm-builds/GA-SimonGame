@@ -110,6 +110,8 @@ function winLossFunc(winLoss) {
     quitGameBtn.style.display = 'none';
     playAgainBtn.style.display = '';
   } else if (winLoss === 'l') {
+    quitGameBtn.style.display = 'none';
+    playAgainBtn.style.display = '';
     winLossText.innerText = winLossTexts[1]["button text"];
   } else if ('n') { 
     winLossText.innerText = '';
